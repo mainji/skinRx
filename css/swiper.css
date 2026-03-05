@@ -1,0 +1,8 @@
+.rolling_banner .swiper-button-next,
+.rolling_banner .swiper-button-prev {
+  color: red;
+}
+.rolling_banner .swiper-button-next,
+.rolling_banner .swiper-button-prev {
+  color: rgb(157, 255, 0);
+}

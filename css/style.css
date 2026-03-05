@@ -40,10 +40,10 @@
   display: flex;
 }
 #gnb ul li {
+  padding: 0 9px;
 }
 #gnb ul li a {
   font-size: 0.85em;
-  padding: 0 9px;
   color: #fff;
 }
 #gnb ul li a:hover {
@@ -70,6 +70,7 @@
   height: 10px;
   display: inline-block;
   background: url(../img/icons.png) 0 0;
+  margin-left: 3px;
 }
 #gnb ul li:nth-child(3) span {
   background-position: -299px 2px;
@@ -150,4 +151,319 @@ h1.logo a span {
   height: 36px;
   background: url(../img/lip.png) no-repeat center;
   background-size: 80%;
+  cursor: pointer;
+  /* 손가락 포인트 */
+}
+
+/* nav */
+#nav ul {
+  height: 56px;
+  align-items: center;
+  /* padding: 18px 0; */
+  display: flex;
+  justify-content: space-around;
+  border-top: 5px solid#000;
+}
+#nav ul li {
+  font-size: 1.1em;
+  font-weight: 500;
+  font-family: "DM Sans", sans-serif;
+}
+#nav ul li a {
+  display: block;
+  padding: 18px 0;
+  color: #000;
+}
+#nav ul li a:hover {
+  color: rgb(156, 223, 223);
+}
+
+/************ main *************/
+
+/* main_banner */
+/* grid 레이아웃 */
+/* .main_banner {
+  display: grid;
+  grid-template-columns: 624px 304px;
+  grid-template-rows: 304px 136px;
+  grid-template-areas:
+    "rolling feature"
+    "rolling event";
+  gap: 16px;
+} 
+
+.rolling_banner {
+  grid-area: rolling;
+}
+.feature_item {
+  grid-area: feature;
+  border: 1px solid #bbbbbb;
+} */
+
+.main_banner {
+  display: flex;
+  gap: 16px;
+}
+.feature_item {
+  width: 304px;
+  height: 304px;
+  margin-bottom: 16px;
+}
+.main_event {
+  width: 304px;
+  height: 136px;
+  background-image: url(../img/main_event.png);
+}
+
+.feature_item figcaption {
+  font-size: 2em;
+  text-align: center;
+  font-family: "DM Sans", sans-serif;
+  text-transform: uppercase;
+  font-weight: 800;
+  padding-top: 10px;
+}
+.feature_item figure.feature_img {
+  text-align: center;
+}
+
+/* item_txt */
+.item_txt {
+}
+.item_txt ul {
+  text-align: center;
+  width: 60%;
+  margin: 0 auto;
+}
+.item_txt ul li {
+  margin-top: 3px;
+  /* 힌줄생략 삼총사 */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.item_txt ul li:first-child {
+  font-weight: 800;
+  color: #191919;
+}
+.item_txt ul li:nth-child(2) {
+  color: #9d9d9d;
+}
+.item_txt ul li span.money {
+  color: #191919;
+  font-weight: 800;
+  margin-right: 8px;
+}
+.item_txt ul li span.cancle {
+  color: #9d9d9d;
+  text-decoration: line-through;
+}
+
+/* title 메인 안에 섹션별로 사용 */
+.title {
+  height: 46px;
+  border-top: 3px solid #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.title h2 {
+  font-family: "DM Sans", sans-serif;
+  font-size: 2em;
+  letter-spacing: 5px;
+  color: #070707;
+}
+/* title 끝 */
+
+/* special_picks */
+.special_picks {
+  margin-top: 50px;
+}
+.pick_menu {
+  border-top: 2px dotted black;
+}
+.pick_menu ul {
+  display: flex;
+  justify-content: center;
+  border-top: 2px dotted black;
+}
+.pick_menu ul li {
+  padding: 0 15px;
+  font-family: "DM Sans", sans-serif;
+}
+.pick_menu ul li a {
+  display: block;
+  /* padding: 0 15px; */
+  padding-top: 15px;
+  padding-bottom: 15px;
+  position: relative;
+}
+.pick_menu ul li a:hover {
+  border-top: 4px solid black;
+  /* position: relative;
+  top: -4px; */
+  margin-top: -4px;
+  color: rgb(156, 223, 223);
+}
+
+/* 삼각형 만들기. 가상요소 보더의 성질 이용*/
+.triangle::before {
+  content: "";
+  border-top: 5px solid rgb(15, 15, 15);
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 5px solid transparent;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+}
+.pick_menu ul li a:hover .triangle::before {
+  opacity: 1;
+}
+
+.pick_box {
+  display: flex;
+}
+.pick {
+  width: 25%;
+  text-align: center;
+}
+.pick.pick_img {
+  padding: 15px 0;
+}
+.pick_icon {
+  width: 27px;
+  height: 16px;
+  background: url(../img/icons.png) no-repeat 0 0;
+  margin: 0 auto;
+  /* display: inline-block */
+}
+
+.icon02 {
+  width: 48px;
+  background-position: -50px 0;
+}
+.icon04 {
+  background-position: -150px 0;
+}
+
+/* magazine  */
+.magazine {
+  margin-top: 50px;
+}
+
+/* brand_focus */
+.brand_focus {
+  margin-top: 50px;
+}
+.poduct_box {
+  display: flex;
+  justify-content: space-between;
+}
+.poduct_box img {
+  width: 100%;
+}
+/* best_cotents */
+.best_cotents {
+  margin-top: 50px;
+}
+
+/* best_inner */
+.best_inner {
+  display: flex;
+}
+.best_menu {
+  width: 176px;
+}
+.best_menu ul {
+}
+.best_menu ul li {
+}
+.best_menu li a {
+  display: block;
+  width: 100%;
+  height: 72px;
+}
+.best_menu li:nth-child(1) a {
+  background: url(../img/best_menu01.jpg);
+}
+.best_menu li:nth-child(2) a {
+  background: url(../img/best_menu02.jpg);
+}
+.best_menu li:nth-child(3) a {
+  background: url(../img/best_menu03.jpg);
+}
+.best_menu li:nth-child(4) a {
+  background: url(../img/best_menu04.jpg);
+}
+.best_menu li:nth-child(1) a:hover {
+  background: url(../img/best_menu01_r.jpg);
+}
+.best_menu li:nth-child(2) a:hover {
+  background: url(../img/best_menu02_r.jpg);
+}
+.best_menu li:nth-child(3) a:hover {
+  background: url(../img/best_menu03_r.jpg);
+}
+.best_menu li:nth-child(4) a:hover {
+  background: url(../img/best_menu04_r.jpg);
+}
+
+.best_menu ul li a:hover {
+}
+
+.best_iframe {
+  width: 768px;
+  height: 288px;
+}
+
+/* tab_box */
+.tab_box {
+  margin-top: 50px;
+}
+
+.seller_box {
+  display: flex;
+  justify-content: space-evenly;
+}
+.seller_box a {
+  filter: invert(100%);
+  transition: filter 0.5s;
+}
+.seller_box a:hover {
+  filter: invert(0%);
+}
+/* footer */
+.footer_innner {
+  margin-top: 100px;
+  display: flex;
+  border-top: 5px solid black;
+  padding: 30px 0;
+}
+.footer_innner section {
+  flex: 1;
+  padding: 0 15px;
+  height: 86px;
+}
+.footer_innner section ul {
+  border-right: 1px dotted black;
+  height: inherit;
+}
+.footer_innner section ul.outlet {
+  border-right: 0;
+  border-bottom: 1px dotted black;
+  margin-bottom: 5px;
+  height: 38px;
+}
+.footer_innner section ul li {
+  margin-bottom: 3px;
+}
+.footer_innner section ul li span {
+  font-weight: 800;
+  font-size: 1.2em;
+}
+.footer_innner section ul li strong {
+  font-size: 1.7em;
 }
